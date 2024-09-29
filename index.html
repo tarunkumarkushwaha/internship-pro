@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Login Page</title>
+  <link rel="stylesheet" href="/style.css">
+</head>
+
+<body>
+  <div class="container">
+    <div class="login-section hidden" id="login">
+      <div class="logo">
+        <img src="/assets/logo.png" alt="Regions Mortgage">
+      </div>
+      <div class="new-customer">
+        Are you a new customer?
+      <div class="dropdown">
+        <button>Enroll Now</button>
+        <div class="dropdown-content">
+          <p><strong>Enroll now to:</strong></p>
+          <ul>
+            <li>Access your loans online</li>
+            <li>Pay your mortgage online</li>
+            <li>View your mortgage statements</li>
+          </ul>
+        </div>
+      </div>
+      </div>
+      <h1>Welcome Back</h1>
+      <p>Sign in to your Regions MyMortgage account.</p>
+
+      <form class="login-form">
+        <label for="onlineID">Online ID</label>
+        <input type="text" class="form-inputs" id="onlineID" placeholder="enter name or id">
+
+        <div class="password-container">
+          <label for="password">Password</label>
+          <input type="password" class="form-inputs" id="password" placeholder="*********">
+          <span class="show-password" onclick="togglePassword()">Show</span>
+        </div>
+
+        <div class="remember-section">
+          <input type="checkbox" id="remember">
+          <label for="remember">Remember me</label>
+        </div>
+
+        <button type="button" onclick="handleSubmit()" class="login-btn">
+           <p class="login-btn-text">Login</p>
+           <span class="loader"></span>
+      </button>
+
+        <div class="help-links">
+          <a href="#">Forgot Online ID?</a>
+          <a href="#">Forgot Password?</a>
+        </div>
+      </form>
+
+      <footer>
+        <p>Equal Housing Lender · Member FDIC</p>
+        <p>&copy;2023 Regions Financial Corporation. All Rights Reserved. · 1 (800) REGIONS</p>
+      </footer>
+
+    </div>
+
+    <!-- image section  -->
+
+    <div>
+      <img src="/assets/house.jpg" id="image" alt="House">
+      <img src="/assets/logoshort.png" class="shortlogoimage" id="shortlogoimage" alt="Regions Mortgage">
+    </div>
+
+  </div>
+
+
+  <script src="/script.js"></script>
+</body>
+
+</html>

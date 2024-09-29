@@ -1,0 +1,301 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: Arial, sans-serif;
+  background-color: #f9f9f9;
+  overflow-x: hidden;
+}
+
+.container {
+  display: flex;
+  height: 93vh;
+  margin-block: 2%;
+  width: 98vw;
+  align-items: center;
+  justify-content: center;
+}
+
+.login-section {
+  width: 40%;
+  height: 100%;
+  padding: 20px;
+  background-color: white;
+  border-radius: 20px 0 0 20px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+  transition: transform 1s ease-in-out;
+}
+
+.hidden {
+  display: none;
+}
+
+.shortlogodiv {
+  padding: 10px;
+  background-color: white;
+  border-radius: 100%;
+}
+
+.shortlogoimage {
+  position: absolute;
+  z-index: 10;
+  transition: all 0.8s ease;
+  top: 50%;
+  left: 50%;
+  border-radius: 100%;
+  border: 20px solid white;
+}
+
+.shortlogoimageGrow{
+  height: 70px;
+  width: 70px;
+}
+
+.logo img {
+  height: 100%;
+  width: 150px;
+}
+
+.new-customer {
+  text-align: right;
+  margin-top: 10px;
+}
+
+.new-customer a {
+  color: green;
+  text-decoration: none;
+  font-weight: bold;
+}
+
+.dropdown {
+  position: relative;
+  display: inline-block;
+}
+
+.dropdown button {
+  background-color: white;
+  color: green;
+  border: 2px solid green;
+  border-radius: 20px;
+  padding: 10px 20px;
+  font-size: 16px;
+  cursor: pointer;
+}
+
+.dropdown-content {
+  display: none;
+  text-align: left;
+  position: absolute;
+  background-color: #333;
+  color: white;
+  padding: 15px;
+  border-radius: 8px;
+  top: 118%;
+  right: 0;
+  width: 290px;
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+  z-index: 1;
+}
+
+.dropdown-content::before {
+  content: "";
+  position: absolute;
+  top: -20px;
+  right: 50px;
+  border-width: 10px;
+  border-style: solid;
+  border-color: transparent transparent #333 transparent;
+}
+
+.dropdown-content p {
+  padding: 10px;
+}
+
+.dropdown:hover .dropdown-content {
+  display: block;
+}
+
+.dropdown-content ul {
+  list-style-type: none;
+  padding: 0;
+}
+
+.dropdown-content ul li {
+  display: flex;
+  align-items: center;
+  margin-bottom: 10px;
+}
+
+.dropdown-content ul li::before {
+  content: "✔";
+  color: green;
+  margin-right: 10px;
+}
+
+h1 {
+  margin-top: 20px;
+  font-size: 24px;
+  color: #333;
+}
+
+.login-form {
+  margin-top: 30px;
+}
+
+.login-form label {
+  display: block;
+  margin: 10px 0 5px;
+  font-size: 14px;
+  color: #666;
+}
+
+.form-inputs {
+  width: 100%;
+  padding: 10px;
+  margin-bottom: 15px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  font-size: 16px;
+}
+
+.form-inputs:focus {
+  border: 1px solid #ffffff;
+  outline: 2px solid rgb(40, 143, 40);
+  outline-offset: 2px;
+}
+
+.password-container {
+  position: relative;
+}
+
+.show-password {
+  position: absolute;
+  right: 10px;
+  top: 32px;
+  font-size: smaller;
+  cursor: pointer;
+  color: #2D8A2E;
+}
+
+.remember-section {
+  display: flex;
+  align-items: center;
+}
+
+.remember-section input {
+  margin-right: 10px;
+}
+
+.login-btn {
+  width: 100%;
+  height: 40px;
+  padding: 12px;
+  background-color: #397a2e;
+  color: white;
+  font-size: 16px;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+.login-btn:hover {
+  background-color: #306724;
+}
+
+.help-links {
+  text-align: center;
+  margin-top: 20px;
+}
+
+.help-links a {
+  color: green;
+  text-decoration: none;
+  margin: 0 10px;
+  font-size: 14px;
+}
+
+footer {
+  text-align: center;
+  margin-top: 30px;
+  font-size: 12px;
+  color: #999;
+}
+
+/* animations  */
+
+.animateImageHeight {
+  height: 93vh;
+  width: 10vw;
+}
+
+.animateImageWidth {
+  width: 95vw;
+
+}
+
+.animateImageWidth50 {
+  width: 50vw;
+  border-radius: 0 20px 20px 0;
+}
+
+.animateshortlogoimage {
+  top: 9%;
+  left: 6.5%;
+}
+
+img {
+  width: 0;
+  height: 0;
+  border-radius: 20px;
+  transition: all 1s ease-in-out;
+}
+
+/* loading spinner  */
+.loader {
+  display: none;
+  width: 20px;
+  height: 20px;
+  border: 3px solid #FFF;
+  border-bottom-color: transparent;
+  border-radius: 50%;
+  animation: rotation 0.5s linear infinite;
+}
+
+@keyframes rotation {
+  0% {
+    transform: rotate(0deg);
+  }
+
+  100% {
+    transform: rotate(360deg);
+  }
+}
+
+@media (max-width: 768px) {
+
+  /* incomplete  */
+  .container {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  .login-section {
+    width: 100%;
+    position: relative;
+    left: 0;
+    margin-bottom: 20px;
+  }
+
+  .image-section {
+    width: 100%;
+    height: 40vh;
+  }
+
+  .image-section img {
+    border-radius: 0;
+    height: 100%;
+  }
+}
